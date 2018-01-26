@@ -1,0 +1,8 @@
+# Generic build files
+node_modules
+build
+lib
+es
+umd
+
+# Package-specific

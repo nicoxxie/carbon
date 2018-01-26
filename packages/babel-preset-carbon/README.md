@@ -14,9 +14,7 @@ Then, in your babel config all you need to do is:
 
 ```json
 {
-  "presets": [
-    "babel-preset-carbon"
-  ]
+  "presets": ["babel-preset-carbon"]
 }
 ```
 
@@ -24,8 +22,6 @@ If you're using the `test` babel preset, then you can do:
 
 ```json
 {
-  "presets": [
-    "babel-preset-carbon/test"
-  ]
+  "presets": ["babel-preset-carbon/test"]
 }
 ```

@@ -6,13 +6,88 @@
     "packages/*"
   ],
   "scripts": {
-    "ci-check": ""
-  },
-  "dependencies": {
-    "lerna": "^2.8.0"
+    "ci-check": "yarn format:diff && yarn lint && yarn test --runInBand",
+    "clean": "lerna clean --yes && rimraf node_modules",
+    "commitmsg": "commitlint -e $GIT_PARAMS",
+    "format": "prettier --write \"**/*.{scss,css,js,md}\"",
+    "format:diff": "prettier --list-different \"**/*.{scss,css,js,md}\"",
+    "lint": "eslint -c packages/eslint-config-carbon/index.js packages",
+    "precommit": "lint-staged",
+    "test": "jest"
   },
   "devDependencies": {
+    "@babel/core": "^7.0.0-beta.38",
+    "@commitlint/cli": "^6.0.2",
+    "@commitlint/config-conventional": "^6.0.2",
+    "babel-core": "^7.0.0-beta.3",
+    "babel-eslint": "^8.2.1",
     "babel-jest": "^22.1.0",
-    "jest": "^22.1.4"
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "enzyme-to-json": "^3.3.1",
+    "eslint": "^4.16.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.6.0",
+    "husky": "^0.14.3",
+    "jest": "^22.1.4",
+    "lerna": "^2.8.0",
+    "lint-staged": "^6.1.0",
+    "prettier": "^1.10.2",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-test-renderer": "^16.2.0",
+    "rimraf": "^2.6.2"
+  },
+  "commitlint": {
+    "extends": ["@commitlint/config-conventional"]
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier",
+      "lint",
+      "git add"
+    ],
+    "*.{scss,css,md}": [
+      "prettier",
+      "git add"
+    ]
+  },
+  "prettier": {
+    "jsxBracketSameLine": true,
+    "printWidth": 80,
+    "singleQuote": true,
+    "trailingComma": "es5"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "<rootDir>/packages/**/*.js"
+    ],
+    "setupFiles": [
+      "<rootDir>/packages/carbon-jest/setup.js"
+    ],
+    "testEnvironment": "jsdom",
+    "testMatch": [
+      "<rootDir>/**/__tests__/**/*.js?(x)"
+    ],
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      "/files/"
+    ],
+    "transform": {
+      ".+\\.(js|jsx)$": "<rootDir>/packages/carbon-jest/jsTransform.js",
+      ".+\\.css$": "<rootDir>/packages/carbon-jest/cssTransform.js",
+      "(?!.*\\.(js|jsx|css|json)$)": "<rootDir>/packages/carbon-jest/fileTransform.js"
+    },
+    "transformIgnorePatterns": [
+      "[/\\\\]node_modules[/\\\\].+\\.(js|jsx)$"
+    ],
+    "moduleFileExtensions": [
+      "js",
+      "json"
+    ],
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ]
   }
 }

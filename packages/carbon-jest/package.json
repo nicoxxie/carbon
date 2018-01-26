@@ -1,0 +1,12 @@
+{
+  "name": "@carbon/jest",
+  "version": "9.0.0-alpha.0",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "babel-jest": "^22.1.0",
+    "babel-preset-carbon": "9.0.0-alpha.0",
+    "object-assign": "^4.1.1",
+    "promise": "^8.0.1",
+    "whatwg-fetch": "^2.0.3"
+  }
+}

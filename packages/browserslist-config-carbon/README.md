@@ -13,7 +13,5 @@ yarn add browserslist-config-carbon --dev
 Inside of your Browserlist config, just do the following:
 
 ```js
-[
-  "extends browserslist-config-carbon"
-]
+['extends browserslist-config-carbon'];
 ```

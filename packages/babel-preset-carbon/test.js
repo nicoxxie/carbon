@@ -5,9 +5,7 @@ module.exports = () => ({
     [
       '@babel/preset-env',
       {
-        targets: [
-          'extends browserslist-config-carbon',
-        ],
+        targets: ['extends browserslist-config-carbon'],
       },
     ],
     '@babel/preset-react',
