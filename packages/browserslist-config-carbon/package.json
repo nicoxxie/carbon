@@ -1,0 +1,6 @@
+{
+  "name": "browserslist-config-carbon",
+  "version": "9.0.0-alpha.0",
+  "main": "index.js",
+  "license": "MIT"
+}

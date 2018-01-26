@@ -1,0 +1,29 @@
+{
+  "name": "eslint-config-carbon-base",
+  "version": "9.0.0-alpha.0",
+  "description": "Base eslint configuration and rules for Carbon Design System projects.",
+  "repository": "https://github.com/carbon-design-system/carbon/tree/master/packages/eslint-config-carbon-base",
+  "bugs": {
+    "url": "https://github.com/carbon-design-system/carbon/issues"
+  },
+  "files": [
+    "rules",
+    "plugins",
+    "index.js"
+  ],
+  "scripts": {
+    "lint": "eslint plugins rules __tests__",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.2.1",
+    "eslint": "^4.2.0",
+    "eslint-plugin-import": "^2.7.0",
+    "jest": "^20.0.4"
+  },
+  "peerDependencies": {
+    "babel-eslint": "^8.2.1",
+    "eslint": "^4.2.0",
+    "eslint-plugin-import": "^2.7.0"
+  }
+}

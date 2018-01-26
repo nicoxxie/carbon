@@ -1,0 +1,17 @@
+{
+  "name": "babel-preset-carbon",
+  "version": "9.0.0-alpha.0",
+  "main": "index.js",
+  "license": "MIT",
+  "files": [
+    "index.js",
+    "test.js"
+  ],
+  "dependencies": {
+    "@babel/plugin-proposal-class-properties": "^7.0.0-beta.38",
+    "@babel/preset-env": "^7.0.0-beta.38",
+    "@babel/preset-react": "^7.0.0-beta.38",
+    "@babel/preset-stage-1": "^7.0.0-beta.38",
+    "browserslist-config-carbon": "9.0.0-alpha.0"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "name": "eslint-config-carbon",
+  "version": "9.0.0-alpha.0",
+  "description": "ESLint configuration and rules for the Carbon Design System.",
+  "repository": "https://github.com/carbon-design-system/carbon/tree/master/packages/eslint-config-carbon",
+  "bugs": {
+    "url": "https://github.com/carbon-design-system/carbon/issues"
+  },
+  "files": [
+    "plugins",
+    "index.js"
+  ],
+  "scripts": {
+    "lint": "eslint plugins",
+    "test": "jest"
+  },
+  "dependencies": {
+    "eslint-config-carbon-base": "9.0.0-alpha.0"
+  },
+  "devDependencies": {
+    "eslint": "^4.2.0",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-jsx-a11y": "^5.1.1",
+    "eslint-plugin-react": "^7.1.0",
+    "jest": "^20.0.4"
+  },
+  "peerDependencies": {
+    "eslint": "^4.2.0",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-jsx-a11y": "^5.1.1",
+    "eslint-plugin-react": "^7.1.0"
+  }
+}
