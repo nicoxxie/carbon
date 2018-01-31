@@ -11,7 +11,7 @@
     "commitmsg": "commitlint -e $GIT_PARAMS",
     "format": "prettier --write \"**/*.{scss,css,js,md}\"",
     "format:diff": "prettier --list-different \"**/*.{scss,css,js,md}\"",
-    "lint": "eslint -c packages/eslint-config-carbon/index.js packages",
+    "lint": "eslint packages",
     "precommit": "lint-staged",
     "test": "jest"
   },
@@ -51,6 +51,12 @@
     "*.{scss,css,md}": [
       "prettier",
       "git add"
+    ]
+  },
+  "eslintConfig": {
+    "parser": "babel-eslint",
+    "extends": [
+      "./packages/eslint-config-carbon-base/index.js"
     ]
   },
   "prettier": {
