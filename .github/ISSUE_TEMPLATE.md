@@ -1,65 +1,45 @@
-**I'm submitting a ...**
+<!-- Feel free to remove sections that aren't relevant.
 
-<!-- (check one with "x") -->
+## Title line template: [Title]: Brief description
 
-* [ ] bug report
-* [ ] feature request
-* [ ] other (Please do not submit support requests here (below))
+-->
 
-## Notes:
+## Detailed description
 
-* Please **do not** use the issue tracker for personal support requests.
+Describe in detail the issue you're having. Is this a feature request (new component, new icon), a bug, or a general issue?
 
-* Please **do not** derail or troll issues. Keep the discussion on topic and
-  respect the opinions of others.
 
-## Bug reports
+> Is this issue related to a specific component?
 
-A bug is a _demonstrable problem_ that is caused by the code in the repository.
-Good bug reports are extremely helpful - thank you!
 
-Guidelines for bug reports:
+> What did you expect to happen? What happened instead? What would you like to see changed?
 
-1. **Use the GitHub issue search** &mdash; check if the issue has already been
-   reported.
 
-   We have a long history of sometimes _very_ detailed discussion of every line of code
-   in the project. We want discussion, so it might still warrant an issue. It
-   just helps to get the (sometimes extensive) context.
 
-2. **Check if the issue has been fixed** &mdash; try to reproduce it using the
-   latest `master` or development branch in the repository.
+> What browser are you working in?
 
-3. **Isolate the problem** &mdash; ideally create a [reduced test
-   case](https://css-tricks.com/reduced-test-cases/) and a live example.
 
-A good bug report shouldn't leave others needing to chase you up for more
-information. Please try to be as detailed as possible in your report. What is
-your environment? What steps will reproduce the issue? What browser(s) and OS
-experience the problem? What would you expect to be the outcome? All these
-details will help people to fix any potential bugs.
 
-Example:
+> What version of the Carbon Design System are you using?
 
-> Short and descriptive example bug report title
->
-> A summary of the issue and the browser/OS environment in which it occurs. If
-> suitable, include the steps required to reproduce the bug.
->
-> 1. This is the first step
-> 2. This is the second step
-> 3. Further steps, etc.
->
-> `<url>` - a link to the reduced test case
->
-> Any other information you want to share that is relevant to the issue being
-> reported. This might include the lines of code that you have identified as
-> causing the bug, and potential solutions (and your opinions on their
-> merits).
 
-## Feature requests
 
-Feature requests are welcome. But take a moment to find out whether your idea
-fits with the scope and aims of the project. It's up to _you_ to make a strong
-case to convince the project's developers of the merits of this feature. Please
-provide as much detail and context as possible.
+> What offering/product do you work on? Any pressing ship or release dates we should be aware of?
+
+
+## Steps to reproduce the issue
+
+1. Step one
+2. Step two
+3. Step three
+4. etc.
+
+
+## Additional information
+
+* Screenshots or code
+* Notes
+
+
+## Add labels
+Please choose the appropriate label(s) from our existing label list to ensure that your issue is properly categorized. This will help us to better understand and address your issue.
