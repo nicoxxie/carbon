@@ -10,6 +10,7 @@ describe('eslint-config-watson-base', () => {
   let CLIEngine;
 
   beforeEach(() => {
+    // eslint-disable-next-line global-require
     CLIEngine = require('eslint').CLIEngine;
   });
 
