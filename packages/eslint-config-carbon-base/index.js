@@ -20,7 +20,4 @@ module.exports = {
     jest: true,
     jasmine: true,
   },
-  parserOptions: {
-    sourceType: 'module',
-  },
 };

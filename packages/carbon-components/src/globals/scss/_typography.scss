@@ -1,9 +1,12 @@
 @import 'vars';
 
-$font-family-mono: 'ibm-plex-mono', 'Menlo', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', Courier, monospace !default;
-$font-family-sans-serif: 'ibm-plex-sans', Helvetica Neue, Arial, sans-serif !default;
+$font-family-mono: 'ibm-plex-mono', 'Menlo', 'DejaVu Sans Mono',
+  'Bitstream Vera Sans Mono', Courier, monospace !default;
+$font-family-sans-serif: 'ibm-plex-sans', Helvetica Neue, Arial,
+  sans-serif !default;
 $font-family-serif: 'ibm-plex-serif', 'Georgia', Times, serif !default;
-$font-family-helvetica: 'IBM Helvetica', Helvetica Neue, HelveticaNeue, Helvetica, sans-serif !default;
+$font-family-helvetica: 'IBM Helvetica', Helvetica Neue, HelveticaNeue,
+  Helvetica, sans-serif !default;
 
 $base-font-size: 16px !default; // Default, Use with em() and rem() functions
 

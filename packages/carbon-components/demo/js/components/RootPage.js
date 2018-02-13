@@ -35,7 +35,9 @@ class RootPage extends Component {
     if (!this.state.selectedNavItemId && componentItems) {
       const pathnameTokens = /^\/demo\/([\w-]+)$/.exec(location.pathname);
       const name = (pathnameTokens && pathnameTokens[1]) || '';
-      const selectedNavItem = (name && componentItems.find(item => item.name === name)) || componentItems[0];
+      const selectedNavItem =
+        (name && componentItems.find(item => item.name === name)) ||
+        componentItems[0];
       if (selectedNavItem) {
         this.switchTo(selectedNavItem.id);
       }
@@ -54,7 +56,9 @@ class RootPage extends Component {
    */
   onSideNavItemClick = evt => {
     const { componentItems } = this.props;
-    const selectedNavItem = componentItems && componentItems.find(item => item.id === evt.target.dataset.navId);
+    const selectedNavItem =
+      componentItems &&
+      componentItems.find(item => item.id === evt.target.dataset.navId);
     if (selectedNavItem) {
       this.switchTo(selectedNavItem.id);
     }
@@ -65,7 +69,10 @@ class RootPage extends Component {
    */
   getCurrentComponentItem() {
     const { componentItems } = this.props;
-    return componentItems && componentItems.find(item => item.id === this.state.selectedNavItemId);
+    return (
+      componentItems &&
+      componentItems.find(item => item.id === this.state.selectedNavItemId)
+    );
   }
 
   /**
@@ -75,7 +82,9 @@ class RootPage extends Component {
   switchTo(selectedNavItemId) {
     this.setState({ selectedNavItemId }, () => {
       const { componentItems } = this.props;
-      const selectedNavItem = componentItems && componentItems.find(item => item.id === selectedNavItemId);
+      const selectedNavItem =
+        componentItems &&
+        componentItems.find(item => item.id === selectedNavItemId);
       const { name } = selectedNavItem || {};
       if (name) {
         history.pushState({ name }, name, `/demo/${name}`);
@@ -93,8 +102,18 @@ class RootPage extends Component {
     return !metadata ? null : (
       <Fragment>
         <SideNavToggle onChange={this.onSideNavToggle} />
-        <SideNav items={componentItems} className={classNames} onItemClick={this.onSideNavItemClick} />
-        <main role="main" id="maincontent" className="container" aria-labelledby="page-title" tabIndex="-1" data-page={name}>
+        <SideNav
+          items={componentItems}
+          className={classNames}
+          onItemClick={this.onSideNavItemClick}
+        />
+        <main
+          role="main"
+          id="maincontent"
+          className="container"
+          aria-labelledby="page-title"
+          tabIndex="-1"
+          data-page={name}>
           <PageHeader label="Component" title={label} />
           <CodePage metadata={metadata} />
         </main>

@@ -9,7 +9,11 @@ import on from '../../globals/js/misc/on';
 
 let didWarnAboutDeprecation = false;
 
-class DetailPageHeader extends mixin(createComponent, initComponentBySearch, handles) {
+class DetailPageHeader extends mixin(
+  createComponent,
+  initComponentBySearch,
+  handles
+) {
   /**
    * The Detail Page Header.
    * @extends CreateComponent
@@ -24,7 +28,9 @@ class DetailPageHeader extends mixin(createComponent, initComponentBySearch, han
     this.previousScrollY = 0;
     // Debounce scroll event calls to handleScroll (default: 50)
     const debouncedScroll = debounce(this._handleScroll.bind(this), 25);
-    this.manage(on(this.element.ownerDocument.defaultView, 'scroll', debouncedScroll));
+    this.manage(
+      on(this.element.ownerDocument.defaultView, 'scroll', debouncedScroll)
+    );
     if (__DEV__) {
       warning(
         didWarnAboutDeprecation,

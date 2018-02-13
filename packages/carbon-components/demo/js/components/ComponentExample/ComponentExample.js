@@ -8,7 +8,13 @@ import CodeExample from '../CodeExample/CodeExample';
 /**
  * The UI to show live code as well as its source.
  */
-const ComponentExample = ({ htmlFile, component, variant, codepenSlug, hideViewFullRender }) => {
+const ComponentExample = ({
+  htmlFile,
+  component,
+  variant,
+  codepenSlug,
+  hideViewFullRender,
+}) => {
   const classNames = classnames({
     'component-example__live--rendered': true,
     [component]: true,
@@ -19,11 +25,17 @@ const ComponentExample = ({ htmlFile, component, variant, codepenSlug, hideViewF
     'bx--global-light-ui': component === 'tabs',
   });
 
-  const codepenLink = codepenSlug && `https://codepen.io/team/carbon/full/${codepenSlug}/`;
-  const componentLink = variant ? `/component/${component}/${variant}` : `/component/${component}`;
+  const codepenLink =
+    codepenSlug && `https://codepen.io/team/carbon/full/${codepenSlug}/`;
+  const componentLink = variant
+    ? `/component/${component}/${variant}`
+    : `/component/${component}`;
 
   const viewFullRender = hideViewFullRender ? null : (
-    <Link className="component-example__view-full-render" target="_blank" href={codepenLink || componentLink}>
+    <Link
+      className="component-example__view-full-render"
+      target="_blank"
+      href={codepenLink || componentLink}>
       {codepenLink ? 'View on CodePen' : 'View full render'}
     </Link>
   );

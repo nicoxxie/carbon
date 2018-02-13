@@ -50,8 +50,11 @@
 
     .#{$prefix}--detail-page-header .#{$prefix}--breadcrumb {
       display: none;
-      transition: opacity $transition--base $carbon--standard-easing $transition-time / 2,
-        visibility $transition--base $carbon--standard-easing $transition-time / 2, transform $transition--base $carbon--standard-easing 0s;
+      transition: opacity $transition--base $carbon--standard-easing
+          $transition-time / 2,
+        visibility $transition--base $carbon--standard-easing $transition-time /
+          2,
+        transform $transition--base $carbon--standard-easing 0s;
       will-change: opacity, visibility, transform;
 
       @include breakpoint(bp--sm--major) {
@@ -77,7 +80,8 @@
       }
     }
 
-    .#{$prefix}--detail-page-header--with-tabs .#{$prefix}--detail-page-header-title-container {
+    .#{$prefix}--detail-page-header--with-tabs
+      .#{$prefix}--detail-page-header-title-container {
       margin-top: rem(3px);
 
       @include breakpoint(bp--sm--major) {
@@ -85,7 +89,8 @@
       }
     }
 
-    .#{$prefix}--detail-page-header--no-tabs .#{$prefix}--detail-page-header-title-container {
+    .#{$prefix}--detail-page-header--no-tabs
+      .#{$prefix}--detail-page-header-title-container {
       padding-bottom: 0;
     }
 
@@ -144,7 +149,8 @@
       right: 0.75rem;
       display: flex;
       align-items: flex-start;
-      transition: top $transition--base $carbon--standard-easing 0s, transform $transition--base $carbon--standard-easing 0s;
+      transition: top $transition--base $carbon--standard-easing 0s,
+        transform $transition--base $carbon--standard-easing 0s;
       will-change: transform, top;
 
       @include breakpoint(bp--sm--major) {
@@ -155,8 +161,10 @@
     }
 
     .#{$prefix}--detail-page-header .#{$prefix}--tabs {
-      transition: opacity $transition--base $carbon--standard-easing $transition-time / 2,
-        visibility $transition--base $carbon--standard-easing $transition-time / 2;
+      transition: opacity $transition--base $carbon--standard-easing
+          $transition-time / 2,
+        visibility $transition--base $carbon--standard-easing $transition-time /
+          2;
       will-change: opacity, visibility, transform;
     }
 

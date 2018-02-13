@@ -67,7 +67,8 @@ tr.#{$prefix}--expandable-row--hover-v2 {
   }
 }
 
-.#{$prefix}--table-expand-v2[data-previous-value='collapsed'] .#{$prefix}--table-expand-v2__svg {
+.#{$prefix}--table-expand-v2[data-previous-value='collapsed']
+  .#{$prefix}--table-expand-v2__svg {
   transform: rotate(90deg);
   transition: transform 200ms $carbon--standard-easing;
 }

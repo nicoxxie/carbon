@@ -49,7 +49,10 @@ class Checkbox extends mixin(createComponent, initComponentBySearch, handles) {
 
       // nested checkboxes inside labels
       if (this.element.parentElement.classList.contains('bx--checkbox-label')) {
-        this.element.parentElement.setAttribute('data-contained-checkbox-state', 'true');
+        this.element.parentElement.setAttribute(
+          'data-contained-checkbox-state',
+          'true'
+        );
       }
     } else if (this.element.checked === false) {
       this.element.removeAttribute('checked');
@@ -58,7 +61,10 @@ class Checkbox extends mixin(createComponent, initComponentBySearch, handles) {
 
       // nested checkboxes inside labels
       if (this.element.parentElement.classList.contains('bx--checkbox-label')) {
-        this.element.parentElement.setAttribute('data-contained-checkbox-state', 'false');
+        this.element.parentElement.setAttribute(
+          'data-contained-checkbox-state',
+          'false'
+        );
       }
     }
   }
@@ -102,7 +108,10 @@ class Checkbox extends mixin(createComponent, initComponentBySearch, handles) {
     }
 
     if (this.element.indeterminate === true) {
-      this.element.parentElement.setAttribute('data-contained-checkbox-state', 'mixed');
+      this.element.parentElement.setAttribute(
+        'data-contained-checkbox-state',
+        'mixed'
+      );
       this.element.setAttribute('aria-checked', 'mixed');
     }
   }
@@ -111,8 +120,14 @@ class Checkbox extends mixin(createComponent, initComponentBySearch, handles) {
     if (this.element.checked === true) {
       this.element.setAttribute('aria-checked', 'true');
     }
-    if (this.element.parentElement.classList.contains('bx--checkbox-label') && this.element.checked) {
-      this.element.parentElement.setAttribute('data-contained-checkbox-state', 'true');
+    if (
+      this.element.parentElement.classList.contains('bx--checkbox-label') &&
+      this.element.checked
+    ) {
+      this.element.parentElement.setAttribute(
+        'data-contained-checkbox-state',
+        'true'
+      );
     }
   }
 

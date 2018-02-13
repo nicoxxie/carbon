@@ -8,7 +8,12 @@ import FloatingMenu from '../floating-menu/floating-menu';
 import getLaunchingDetails from '../../globals/js/misc/get-launching-details';
 import on from '../../globals/js/misc/on';
 
-class OverflowMenu extends mixin(createComponent, initComponentBySearch, eventedShowHideState, handles) {
+class OverflowMenu extends mixin(
+  createComponent,
+  initComponentBySearch,
+  eventedShowHideState,
+  handles
+) {
   /**
    * Overflow menu.
    * @extends CreateComponent
@@ -38,7 +43,9 @@ class OverflowMenu extends mixin(createComponent, initComponentBySearch, evented
     );
     this.manage(
       on(this.element, 'mousedown', () => {
-        this.wasOpenBeforeClick = element.classList.contains(this.options.classShown);
+        this.wasOpenBeforeClick = element.classList.contains(
+          this.options.classShown
+        );
       })
     );
   }
@@ -51,7 +58,9 @@ class OverflowMenu extends mixin(createComponent, initComponentBySearch, evented
    */
   changeState(state, detail, callback) {
     if (!this.optionMenu) {
-      const optionMenu = this.element.querySelector(this.options.selectorOptionMenu);
+      const optionMenu = this.element.querySelector(
+        this.options.selectorOptionMenu
+      );
       if (!optionMenu) {
         throw new Error('Cannot find the target menu.');
       }
@@ -65,13 +74,19 @@ class OverflowMenu extends mixin(createComponent, initComponentBySearch, evented
       });
       this.children.push(this.optionMenu);
     }
-    if (this.optionMenu.element.classList.contains(this.options.classMenuFlip)) {
+    if (
+      this.optionMenu.element.classList.contains(this.options.classMenuFlip)
+    ) {
       this.optionMenu.options.offset = this.options.objMenuOffsetFlip;
     }
 
     // Delegates the action of changing state to the menu.
     // (And thus the before/after shown/hidden events are fired from the menu)
-    this.optionMenu.changeState(state, Object.assign(detail, { delegatorNode: this.element }), callback);
+    this.optionMenu.changeState(
+      state,
+      Object.assign(detail, { delegatorNode: this.element }),
+      callback
+    );
   }
 
   /**
@@ -105,7 +120,8 @@ class OverflowMenu extends mixin(createComponent, initComponentBySearch, evented
     if (key === 13) {
       const element = this.element;
       const isOfSelf = element.contains(event.target);
-      const shouldBeOpen = isOfSelf && !element.classList.contains(this.options.classShown);
+      const shouldBeOpen =
+        isOfSelf && !element.classList.contains(this.options.classShown);
       const state = shouldBeOpen ? 'shown' : 'hidden';
 
       if (isOfSelf) {

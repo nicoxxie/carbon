@@ -51,13 +51,15 @@
     border-bottom: 1px solid $ui-04;
     transition: $transition--base $carbon--standard-easing;
 
-    .#{$prefix}--structured-list--selection &:hover:not(.#{$prefix}--structured-list-row--header-row) {
+    .#{$prefix}--structured-list--selection
+      &:hover:not(.#{$prefix}--structured-list-row--header-row) {
       background-color: rgba($brand-02, 0.1);
       cursor: pointer;
     }
 
     // Deprecated
-    [data-structured-list] &:hover:not(.#{$prefix}--structured-list-row--header-row) {
+    [data-structured-list]
+      &:hover:not(.#{$prefix}--structured-list-row--header-row) {
       background-color: rgba($brand-02, 0.1);
       cursor: pointer;
     }
@@ -121,8 +123,12 @@
       fill: rgba($brand-02, 0.1);
     }
 
-    .#{$prefix}--structured-list-input:checked + .#{$prefix}--structured-list-row &,
-    .#{$prefix}--structured-list-input:checked + .#{$prefix}--structured-list-td & {
+    .#{$prefix}--structured-list-input:checked
+      + .#{$prefix}--structured-list-row
+      &,
+    .#{$prefix}--structured-list-input:checked
+      + .#{$prefix}--structured-list-td
+      & {
       fill: $brand-02;
     }
   }

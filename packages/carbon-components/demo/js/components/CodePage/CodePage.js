@@ -37,7 +37,11 @@ const CodePage = ({ metadata, hideViewFullRender }) => {
   const subItems = getSubItems(metadata).filter(item => !item.isHidden);
   const componentContent =
     !metadata.isCollection && subItems.length <= 1 ? (
-      <ComponentExample hideViewFullRender={hideViewFullRender} component={metadata.name} htmlFile={getContent(metadata)} />
+      <ComponentExample
+        hideViewFullRender={hideViewFullRender}
+        component={metadata.name}
+        htmlFile={getContent(metadata)}
+      />
     ) : (
       subItems.map(item => (
         <div key={item.id} className="component-variation">
@@ -55,7 +59,12 @@ const CodePage = ({ metadata, hideViewFullRender }) => {
   return (
     <div className="page code-page test">
       {componentContent}
-      {metadata.notes && <div className="page_md" dangerouslySetInnerHTML={{ __html: md.render(metadata.notes) }} />}
+      {metadata.notes && (
+        <div
+          className="page_md"
+          dangerouslySetInnerHTML={{ __html: md.render(metadata.notes) }}
+        />
+      )}
     </div>
   );
   /* eslint-enable react/no-danger */

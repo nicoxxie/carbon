@@ -33,7 +33,8 @@
 
     &.#{$prefix}--dropdown--open:focus {
       outline: 1px solid transparent;
-      box-shadow: 0 -1px 0 0 $brand-01, 1px 0 0 0 $brand-01, -1px 0 0 0 $brand-01;
+      box-shadow: 0 -1px 0 0 $brand-01, 1px 0 0 0 $brand-01,
+        -1px 0 0 0 $brand-01;
     }
   }
 
@@ -120,7 +121,8 @@
 
     &:focus {
       .#{$prefix}--dropdown-list {
-        box-shadow: 0 1px 0 0 $brand-01, 1px 0 0 0 $brand-01, -1px 0 0 0 $brand-01;
+        box-shadow: 0 1px 0 0 $brand-01, 1px 0 0 0 $brand-01,
+          -1px 0 0 0 $brand-01;
       }
     }
 

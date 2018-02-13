@@ -60,12 +60,15 @@ $list-box-menu-width: rem(300px);
     width: $list-box-menu-width;
   }
 
-  .#{$prefix}--list-box--inline > .#{$prefix}--list-box__field[aria-expanded='true'] ~ .#{$prefix}--list-box__menu {
+  .#{$prefix}--list-box--inline
+    > .#{$prefix}--list-box__field[aria-expanded='true']
+    ~ .#{$prefix}--list-box__menu {
     outline: 1px solid $brand-01;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
   }
 
-  .#{$prefix}--list-box--inline > .#{$prefix}--list-box__field[aria-expanded='true'] {
+  .#{$prefix}--list-box--inline
+    > .#{$prefix}--list-box__field[aria-expanded='true'] {
     outline: none;
   }
 
@@ -94,8 +97,10 @@ $list-box-menu-width: rem(300px);
     outline: none;
   }
 
-  .#{$prefix}--list-box__field[aria-expanded='true'] ~ .#{$prefix}--list-box__menu {
-    box-shadow: 0 1px 0 0 $brand-01, 1px 0 0 0 $brand-01, -1px 0 0 0 $brand-01, 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+  .#{$prefix}--list-box__field[aria-expanded='true']
+    ~ .#{$prefix}--list-box__menu {
+    box-shadow: 0 1px 0 0 $brand-01, 1px 0 0 0 $brand-01, -1px 0 0 0 $brand-01,
+      0 4px 8px 0 rgba(0, 0, 0, 0.1);
   }
 
   // Label for a `list-box__field`
@@ -219,7 +224,8 @@ $list-box-menu-width: rem(300px);
   // Tweaks for descendants
 
   // In multi-select scenarios, we need to target checkbox inputs
-  .#{$prefix}--list-box__menu-item > .#{$prefix}--form-item.#{$prefix}--checkbox-wrapper {
+  .#{$prefix}--list-box__menu-item
+    > .#{$prefix}--form-item.#{$prefix}--checkbox-wrapper {
     margin: 0;
   }
 

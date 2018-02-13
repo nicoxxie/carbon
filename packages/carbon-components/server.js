@@ -21,7 +21,12 @@ const port = process.env.PORT || 8080;
 const config = require('./tools/webpack.dev.config');
 
 const compiler = webpack(config);
-app.use(webpackDevMiddleware(compiler, { noInfo: true, publicPath: config.output.publicPath }));
+app.use(
+  webpackDevMiddleware(compiler, {
+    noInfo: true,
+    publicPath: config.output.publicPath,
+  })
+);
 app.use(webpackHotMiddleware(compiler));
 
 const fractal = Fractal.create();
@@ -46,9 +51,9 @@ const getContent = glob =>
     if (filePaths.length === 0) {
       return undefined;
     }
-    return Promise.all(filePaths.map(filePath => readFile(filePath, { encoding: 'utf8' }))).then(contents =>
-      contents.reduce((a, b) => a.concat(b))
-    );
+    return Promise.all(
+      filePaths.map(filePath => readFile(filePath, { encoding: 'utf8' }))
+    ).then(contents => contents.reduce((a, b) => a.concat(b)));
   });
 
 /**
@@ -61,22 +66,31 @@ const ensureComponentItemNotes = item => {
   if (!item.isCollection || !item.config.readme) {
     return item;
   }
-  return item.config.readme
-    .getContent()
-    .then(notes => Object.assign(typeof item.toJSON !== 'function' ? item : item.toJSON(), { notes }));
+  return item.config.readme.getContent().then(notes =>
+    Object.assign(typeof item.toJSON !== 'function' ? item : item.toJSON(), {
+      notes,
+    })
+  );
 };
 
 ['/', '/demo/:component'].forEach(route => {
   app.get(route, (req, res) => {
     const name = req.params.component;
 
-    if (name && path.relative('src/components', `src/components/${name}`).substr(0, 2) === '..') {
+    if (
+      name &&
+      path.relative('src/components', `src/components/${name}`).substr(0, 2) ===
+        '..'
+    ) {
       res.status(404).end();
     } else {
       fractal
         .load()
         .then(([componentSource, docSource]) =>
-          Promise.all([Promise.all(componentSource.items().map(ensureComponentItemNotes)), docSource.items()])
+          Promise.all([
+            Promise.all(componentSource.items().map(ensureComponentItemNotes)),
+            docSource.items(),
+          ])
         )
         .then(([componentItems, docItems]) => {
           res.render('demo-nav', {
@@ -94,7 +108,8 @@ const ensureComponentItemNotes = item => {
 
 ['/component/:component', '/component/:component/:variant'].forEach(route => {
   app.get(route, (req, res) => {
-    const glob = `src/components/${req.params.component}/**/${req.params.variant || '*'}.html`;
+    const glob = `src/components/${req.params.component}/**/${req.params
+      .variant || '*'}.html`;
 
     if (path.relative('src/components', glob).substr(0, 2) === '..') {
       res.status(404).end();

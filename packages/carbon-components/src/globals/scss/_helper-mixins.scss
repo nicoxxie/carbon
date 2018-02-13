@@ -101,8 +101,8 @@
     $deprecations--reasons: append($deprecations--reasons, $reason) !global;
     @content;
   } @else {
-    @warn 'Deprecated code was found, this code will be removed before the next release of Carbon.
-REASON: #{$reason}';
+    @warn 'Deprecated code was found,
+      this code will be removed before the next release of Carbon. REASON: #{$reason}';
     @content;
   }
 }

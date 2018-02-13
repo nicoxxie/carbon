@@ -7,13 +7,19 @@ describe('Test interior left nav', function() {
     it('Should throw if root element is not given', function() {
       expect(() => {
         new InteriorLeftNav();
-      }).toThrowError(TypeError, 'DOM element should be given to initialize this widget.');
+      }).toThrowError(
+        TypeError,
+        'DOM element should be given to initialize this widget.'
+      );
     });
 
     it('Should throw if root element is not a DOM element', function() {
       expect(() => {
         new InteriorLeftNav(document.createTextNode(''));
-      }).toThrowError(TypeError, 'DOM element should be given to initialize this widget.');
+      }).toThrowError(
+        TypeError,
+        'DOM element should be given to initialize this widget.'
+      );
     });
   });
 
@@ -92,13 +98,17 @@ describe('Test interior left nav', function() {
       element = document.querySelector('[data-interior-left-nav]');
       instance3 = new InteriorLeftNav(element);
 
-      const nested = document.querySelectorAll('.left-nav-list__item--has-children');
+      const nested = document.querySelectorAll(
+        '.left-nav-list__item--has-children'
+      );
 
       for (let i = 0; i < nested.length; i += 1) {
         nested[i].dispatchEvent(new CustomEvent('click', { bubbles: true }));
       }
 
-      const expanded = document.querySelectorAll('.left-nav-list__item--expanded');
+      const expanded = document.querySelectorAll(
+        '.left-nav-list__item--expanded'
+      );
       expect(expanded.length).toBe(nested.length);
     });
   });
@@ -117,7 +127,9 @@ describe('Test interior left nav', function() {
     });
 
     it('should be called', function() {
-      const item = document.querySelector(instance.options.selectorLeftNavListItem);
+      const item = document.querySelector(
+        instance.options.selectorLeftNavListItem
+      );
       spyOn(instance, 'addActiveListItem');
       instance.addActiveListItem(item);
       expect(instance.addActiveListItem).toHaveBeenCalled();

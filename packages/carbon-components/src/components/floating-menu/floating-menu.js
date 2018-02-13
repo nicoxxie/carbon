@@ -5,7 +5,11 @@ import trackBlur from '../../globals/js/mixins/track-blur';
 import getLaunchingDetails from '../../globals/js/misc/get-launching-details';
 import optimizedResize from '../../globals/js/misc/resize';
 
-class FloatingMenu extends mixin(createComponent, eventedShowHideState, trackBlur) {
+class FloatingMenu extends mixin(
+  createComponent,
+  eventedShowHideState,
+  trackBlur
+) {
   /**
    * Floating menu.
    * @extends CreateComponent
@@ -33,13 +37,18 @@ class FloatingMenu extends mixin(createComponent, eventedShowHideState, trackBlu
    */
   constructor(element, options) {
     super(element, options);
-    const attribDirectionValue = this.element.getAttribute(this.options.attribDirection);
+    const attribDirectionValue = this.element.getAttribute(
+      this.options.attribDirection
+    );
     if (!this.options.direction) {
       this.options.direction = attribDirectionValue || 'bottom';
     }
     if (!attribDirectionValue) {
       // Update attribute for styling
-      this.element.setAttribute(this.options.attribDirection, this.options.direction);
+      this.element.setAttribute(
+        this.options.attribDirection,
+        this.options.direction
+      );
     }
   }
 
@@ -50,7 +59,11 @@ class FloatingMenu extends mixin(createComponent, eventedShowHideState, trackBlu
     if (this.element.classList.contains(this.options.classShown)) {
       this.changeState('hidden', getLaunchingDetails(event));
       const { refNode } = this.options;
-      if (this.element.contains(event.relatedTarget) && refNode && event.target !== refNode) {
+      if (
+        this.element.contains(event.relatedTarget) &&
+        refNode &&
+        event.target !== refNode
+      ) {
         refNode.focus();
       }
     }
@@ -61,7 +74,10 @@ class FloatingMenu extends mixin(createComponent, eventedShowHideState, trackBlu
    * @returns {Element} The element that this menu should be placed to.
    */
   _getContainer() {
-    return this.element.closest(this.options.selectorContainer) || this.element.ownerDocument.body;
+    return (
+      this.element.closest(this.options.selectorContainer) ||
+      this.element.ownerDocument.body
+    );
   }
 
   /**
@@ -73,14 +89,24 @@ class FloatingMenu extends mixin(createComponent, eventedShowHideState, trackBlu
     const { refNode, offset, direction } = this.options;
 
     if (!refNode) {
-      throw new Error('Cannot find the refernce node for positioning floating menu.');
+      throw new Error(
+        'Cannot find the refernce node for positioning floating menu.'
+      );
     }
 
     const scroll = refNode.ownerDocument.defaultView.pageYOffset;
 
-    const { left: refLeft, top: refTop, right: refRight, bottom: refBottom } = refNode.getBoundingClientRect();
+    const {
+      left: refLeft,
+      top: refTop,
+      right: refRight,
+      bottom: refBottom,
+    } = refNode.getBoundingClientRect();
 
-    const { width: menuWidth, height: menuHeight } = element.getBoundingClientRect();
+    const {
+      width: menuWidth,
+      height: menuHeight,
+    } = element.getBoundingClientRect();
 
     const refCenterHorizontal = (refLeft + refRight) / 2;
     const refCenterVertical = (refTop + refBottom) / 2;
@@ -114,18 +140,23 @@ class FloatingMenu extends mixin(createComponent, eventedShowHideState, trackBlu
       return;
     }
     const element = this.element;
-    const computedStyle = element.ownerDocument.defaultView.getComputedStyle(element);
+    const computedStyle = element.ownerDocument.defaultView.getComputedStyle(
+      element
+    );
     const styles = {
       position: 'absolute',
       right: 'auto',
       margin: 0,
     };
     Object.keys(styles).forEach(key => {
-      const expected = typeof styles[key] === 'number' ? parseFloat(styles[key]) : styles[key];
+      const expected =
+        typeof styles[key] === 'number' ? parseFloat(styles[key]) : styles[key];
       const actual = computedStyle.getPropertyValue(key);
       if (expected !== actual) {
         // eslint-disable-next-line no-console
-        console.warn(`Floating menu component expects ${key}: ${styles[key]} style.`);
+        console.warn(
+          `Floating menu component expects ${key}: ${styles[key]} style.`
+        );
       }
     });
   }
@@ -149,7 +180,10 @@ class FloatingMenu extends mixin(createComponent, eventedShowHideState, trackBlu
   shouldStateBeChanged(state) {
     return (
       (state === 'shown' || state === 'hidden') &&
-      state !== (this.element.classList.contains(this.options.classShown) ? 'shown' : 'hidden')
+      state !==
+        (this.element.classList.contains(this.options.classShown)
+          ? 'shown'
+          : 'hidden')
     );
   }
 
@@ -164,7 +198,9 @@ class FloatingMenu extends mixin(createComponent, eventedShowHideState, trackBlu
     const shown = state === 'shown';
     const { refNode, classShown, classRefShown } = this.options;
     if (!refNode) {
-      throw new TypeError('Cannot find the refernce node for changing the style.');
+      throw new TypeError(
+        'Cannot find the refernce node for changing the style.'
+      );
     }
     this.element.classList.toggle(classShown, shown);
     if (classRefShown) {
@@ -178,7 +214,10 @@ class FloatingMenu extends mixin(createComponent, eventedShowHideState, trackBlu
       }
       this._getContainer().appendChild(this.element);
       this._place();
-      (this.element.querySelector(this.options.selectorPrimaryFocus) || this.element).focus();
+      (
+        this.element.querySelector(this.options.selectorPrimaryFocus) ||
+        this.element
+      ).focus();
     }
     if (state === 'hidden' && this.hResize) {
       this.hResize.release();
