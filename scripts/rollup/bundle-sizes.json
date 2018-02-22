@@ -1,0 +1,12 @@
+{
+  "bundleSizes": {
+    "vanilla.umd": {
+      "size": 18002,
+      "gzip": 5907
+    },
+    "react.umd": {
+      "size": 14077,
+      "gzip": 4687
+    }
+  }
+}
