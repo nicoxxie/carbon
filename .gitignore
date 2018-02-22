@@ -21,3 +21,4 @@ package-lock.json
 
 # Ignore generate files in each folder
 umd.js
+*.umd.js

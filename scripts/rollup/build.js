@@ -42,6 +42,36 @@ const packages = [
       },
     },
   },
+  {
+    name: 'react.node.v6',
+    entry: path.resolve(__dirname, '../../react/node/v6.js'),
+    output: {
+      prefix: 'v6',
+      umd: {
+        name: 'CarbonReactNodeV6Polyfill',
+      },
+    },
+  },
+  {
+    name: 'react.node.v8',
+    entry: path.resolve(__dirname, '../../react/node/v8.js'),
+    output: {
+      prefix: 'v8',
+      umd: {
+        name: 'CarbonReactNodeV8Polyfill',
+      },
+    },
+  },
+  {
+    name: 'react.node.v9',
+    entry: path.resolve(__dirname, '../../react/node/v9.js'),
+    output: {
+      prefix: 'v9',
+      umd: {
+        name: 'CarbonReactNodeV9Polyfill',
+      },
+    },
+  },
 ];
 const bundleFormats = ['umd'];
 
@@ -68,7 +98,9 @@ async function build() {
       bundleFormats.map(format => {
         const outputOptions = {
           format,
-          file: path.resolve(pkg.entry, `../${format}.js`),
+          file: pkg.output.prefix
+            ? path.resolve(pkg.entry, `../${pkg.output.prefix}.${format}.js`)
+            : path.resolve(pkg.entry, `../${format}.js`),
         };
 
         if (format === 'umd') {
