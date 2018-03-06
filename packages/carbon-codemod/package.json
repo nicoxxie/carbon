@@ -1,0 +1,11 @@
+{
+  "name": "@carbon/codemod",
+  "description": "Code modification scripts for the Carbon Design System",
+  "private": true,
+  "version": "9.0.0-alpha.0",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "babel-preset-carbon": "9.0.0-alpha.3",
+    "jscodeshift": "^0.4.1"
+  }
+}

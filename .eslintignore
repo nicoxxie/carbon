@@ -9,3 +9,6 @@ umd
 packages/eslint-config-carbon-base/examples/sample-project
 packages/eslint-config-carbon/examples/sample-project
 packages/carbon-components
+
+# Test fixtures
+__testfixtures__
