@@ -1,0 +1,17 @@
+{
+  "name": "stylelint-config-carbon",
+  "private": true,
+  "main": "index.js",
+  "description": "Stylelint configuration for the Carbon Design System",
+  "version": "9.0.0-alpha.0",
+  "license": "Apache-2.0",
+  "peerDependencies": {
+    "stylelint": "^9.1.1"
+  },
+  "devDependencies": {
+    "stylelint": "^9.1.1"
+  },
+  "dependencies": {
+    "stylelint-scss": "^2.4.0"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "name": "sample-project",
+  "private": true,
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "stylelint-config-carbon": "^9.0.0-alpha.0"
+  }
+}

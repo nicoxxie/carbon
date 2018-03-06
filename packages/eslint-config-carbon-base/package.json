@@ -1,5 +1,6 @@
 {
   "name": "eslint-config-carbon-base",
+  "private": true,
   "version": "9.0.0-alpha.0",
   "description": "Base eslint configuration and rules for Carbon Design System projects.",
   "repository": "https://github.com/carbon-design-system/carbon/tree/master/packages/eslint-config-carbon-base",

@@ -1,5 +1,5 @@
 {
-  "name": "browserslist-config-carbon",
+  "name": "@carbon/test",
   "private": true,
   "version": "9.0.0-alpha.0",
   "license": "Apache-2.0"
