@@ -2,13 +2,13 @@
 
 ## Usage
 
-Run the following command using [npm]():
+Run the following command using [npm](https://www.npmjs.com/):
 
 ```bash
 npm i stylelint stylelint-config-carbon --save-dev
 ```
 
-If you prefer [Yarn](), use the following command instead:
+If you prefer [Yarn](https://yarnpkg.com/en/), use the following command instead:
 
 ```bash
 yarn add stylelint stylelint-config-carbon --dev

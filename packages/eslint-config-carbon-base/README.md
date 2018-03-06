@@ -4,9 +4,15 @@
 
 ## Usage
 
+Run the following command using [npm](https://www.npmjs.com/):
+
 ```bash
 npm install eslint-config-carbon-base --save
-# or
+```
+
+If you prefer [Yarn](https://yarnpkg.com/en/), use the following command instead:
+
+```base
 yarn add eslint-config-carbon-base
 ```
 

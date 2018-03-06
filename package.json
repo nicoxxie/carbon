@@ -54,9 +54,13 @@
       "lint:js",
       "git add"
     ],
-    "*.{scss,css,md}": [
+    "*.{scss,css}": [
       "prettier",
       "lint:scss",
+      "git add"
+    ],
+    ".md": [
+      "prettier",
       "git add"
     ]
   },

@@ -1,12 +1,18 @@
 # `babel-preset-carbon`
 
-> Babel config for Carbon Design System
+> Babel config for the Carbon Design System
 
 ## Usage
 
+Run the following command using [npm](https://www.npmjs.com/):
+
 ```bash
 npm i babel-preset-carbon --save-dev
-# Or, with yarn
+```
+
+If you prefer [Yarn](https://yarnpkg.com/en/), use the following command instead:
+
+```
 yarn add babel-preset-carbon --dev
 ```
 

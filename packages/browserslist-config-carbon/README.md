@@ -4,9 +4,15 @@
 
 ## Usage
 
+Run the following command using [npm](https://www.npmjs.com/):
+
 ```bash
 npm i browserslist-config-carbon --save-dev
-# Or, with yarn
+```
+
+If you prefer [Yarn](https://yarnpkg.com/en/), use the following command instead:
+
+```
 yarn add browserslist-config-carbon --dev
 ```
 

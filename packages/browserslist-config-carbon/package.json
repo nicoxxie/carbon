@@ -1,6 +1,8 @@
 {
   "name": "browserslist-config-carbon",
+  "description": "Browserslist config for the Carbon Design System",
   "private": true,
   "version": "9.0.0-alpha.0",
+  "main": "index.js",
   "license": "Apache-2.0"
 }
