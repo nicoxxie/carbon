@@ -6,7 +6,7 @@
     "packages/*"
   ],
   "scripts": {
-    "all-contributors": "",
+    "all-contributors": "all-contributors",
     "ci-check": "yarn format:diff && yarn lint && yarn test --runInBand",
     "clean": "lerna clean --yes && rimraf node_modules",
     "commitmsg": "commitlint -e $GIT_PARAMS",
@@ -14,7 +14,7 @@
     "format:diff": "prettier --list-different \"**/*.{scss,css,js,md}\"",
     "lint": "yarn lint:js && yarn lint:scss",
     "lint:js": "eslint packages",
-    "lint:scss": "stylelint \"packages/**/*.scss\" --ignore-pattern \"packages/carbon-components\" --config ./packages/stylelint-config-carbon/index.js",
+    "lint:scss": "stylelint \"packages/**/*.scss\"",
     "precommit": "lint-staged",
     "test": "jest"
   },
@@ -65,6 +65,10 @@
     "extends": [
       "./packages/eslint-config-carbon-base/index.js"
     ]
+  },
+  "stylelint": {
+    "extends": "./packages/stylelint-config-carbon/index.js",
+    "ignoreFiles": ["packages/carbon-components/**/*.scss"]
   },
   "prettier": {
     "jsxBracketSameLine": true,
