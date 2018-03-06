@@ -1,6 +1,5 @@
 {
   "name": "stylelint-config-carbon",
-  "private": true,
   "description": "Stylelint configuration for the Carbon Design System",
   "main": "index.js",
   "version": "9.0.0-alpha.0",
