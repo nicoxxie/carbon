@@ -77,7 +77,7 @@
       "<rootDir>/packages/**/*.js"
     ],
     "setupFiles": [
-      "<rootDir>/packages/carbon-jest/setup.js"
+      "<rootDir>/packages/carbon-test/jest/setup.js"
     ],
     "testEnvironment": "jsdom",
     "testMatch": [
@@ -88,9 +88,9 @@
       "/files/"
     ],
     "transform": {
-      ".+\\.(js|jsx)$": "<rootDir>/packages/carbon-jest/jsTransform.js",
-      ".+\\.css$": "<rootDir>/packages/carbon-jest/cssTransform.js",
-      "(?!.*\\.(js|jsx|css|json)$)": "<rootDir>/packages/carbon-jest/fileTransform.js"
+      ".+\\.(js|jsx)$": "<rootDir>/packages/carbon-test/jest/jsTransform.js",
+      ".+\\.css$": "<rootDir>/packages/carbon-test/jest/cssTransform.js",
+      "(?!.*\\.(js|jsx|css|json)$)": "<rootDir>/packages/carbon-test/jest/fileTransform.js"
     },
     "transformIgnorePatterns": [
       "[/\\\\]node_modules[/\\\\].+\\.(js|jsx)$"

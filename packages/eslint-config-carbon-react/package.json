@@ -1,5 +1,5 @@
 {
-  "name": "eslint-config-carbon",
+  "name": "eslint-config-carbon-react",
   "private": true,
   "version": "9.0.0-alpha.0",
   "description": "ESLint configuration and rules for the Carbon Design System.",

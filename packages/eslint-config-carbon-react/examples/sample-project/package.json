@@ -1,5 +1,5 @@
 {
-  "name": "sample-project",
+  "name": "sample-project-eslint-react",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -10,13 +10,13 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "eslint-config-carbon": "9.0.0-alpha.0",
+    "eslint-config-carbon-react": "9.0.0-alpha.0",
     "eslint": "^4.2.0",
     "eslint-plugin-import": "^2.7.0",
     "eslint-plugin-jsx-a11y": "^5.1.1",
     "eslint-plugin-react": "^7.1.0"
   },
   "eslintConfig": {
-    "extends": ["carbon"]
+    "extends": ["carbon-react"]
   }
 }
