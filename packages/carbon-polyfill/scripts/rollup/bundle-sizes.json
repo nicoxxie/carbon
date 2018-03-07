@@ -1,12 +1,12 @@
 {
   "bundleSizes": {
     "vanilla.umd": {
-      "size": 18002,
-      "gzip": 5907
+      "size": 514,
+      "gzip": 257
     },
     "react.umd": {
-      "size": 14077,
-      "gzip": 4687
+      "size": 457,
+      "gzip": 228
     },
     "react.node.v8.umd": {
       "size": 230,
@@ -17,8 +17,8 @@
       "gzip": 164
     },
     "react.node.v6.umd": {
-      "size": 10362,
-      "gzip": 3559
+      "size": 275,
+      "gzip": 191
     }
   }
 }

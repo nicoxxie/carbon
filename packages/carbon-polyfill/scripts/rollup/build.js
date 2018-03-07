@@ -12,12 +12,12 @@ const baseInputOptions = {
       main: true,
     }),
     require('rollup-plugin-commonjs')({
-      include: 'node_modules/**',
+      include: ['node_modules/**', '../../node_modules/**'],
       sourceMap: true,
     }),
     require('rollup-plugin-babel')({
       babelrc: false,
-      presets: [['es2015', { modules: false }]],
+      presets: [['env', { modules: false }]],
       exclude: ['node_modules/**'],
     }),
   ],
