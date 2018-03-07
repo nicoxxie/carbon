@@ -1,3 +1,7 @@
+/**
+ * @jest-environment node
+ */
+
 import getValuesFor from '../values';
 
 test('getValuesFor', () => {

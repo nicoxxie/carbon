@@ -118,6 +118,8 @@ async function build() {
 build()
   .then(() => {
     stats.saveResults();
+    // eslint-disable-next-line no-console
     console.log(stats.printResults());
   })
+  // eslint-disable-next-line no-console
   .catch(error => console.log(error));

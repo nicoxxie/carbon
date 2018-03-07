@@ -4,6 +4,8 @@ build
 lib
 es
 umd
+umd.js
+*.umd.*
 
 # Package-specific
 packages/eslint-config-carbon-base/examples/sample-project

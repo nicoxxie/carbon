@@ -1,3 +1,7 @@
+/**
+ * @jest-environment node
+ */
+
 import add from '../add';
 
 test('add', () => {
