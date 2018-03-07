@@ -4,9 +4,13 @@
   "version": "9.0.0-alpha.1",
   "license": "Apache-2.0",
   "dependencies": {
+    "@carbon/polyfill": "9.0.0-alpha.0",
     "enzyme": "^3.1.0",
     "enzyme-adapter-react-16": "^1.1.0",
-    "enzyme-to-json": "^3.1.2"
+    "enzyme-to-json": "^3.1.2",
+    "object-assign": "^4.1.1",
+    "promise": "^8.0.1",
+    "whatwg-fetch": "^2.0.3"
   },
   "peerDependencies": {
     "jest": "^22.1.0"
