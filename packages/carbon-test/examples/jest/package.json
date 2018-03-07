@@ -1,0 +1,12 @@
+{
+  "name": "jest",
+  "private": true,
+  "scripts": {
+    "test": "jest"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@carbon/test": "^9.0.0-alpha.0",
+    "jest": "^22.4.2"
+  }
+}
