@@ -1,5 +1,7 @@
 # `@carbon/carbon`
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/carbon-design-system/carbon.svg)](https://greenkeeper.io/)
+
 > _Unstable and not ready for consumption._
 
 ## Contributors
