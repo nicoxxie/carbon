@@ -1,0 +1,8 @@
+{
+  "presets": [
+    ["../../../index.js", {
+      "modules": false,
+      "useBuiltIns": "usage"
+    }]
+  ]
+}

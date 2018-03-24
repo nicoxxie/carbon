@@ -2,4 +2,8 @@ build
 lib
 es
 umd
+umd.*
+*.umd
+*.umd.*
 package.json
+__testfixtures__

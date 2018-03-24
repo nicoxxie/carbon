@@ -1,0 +1,8 @@
+{
+  "presets": [
+    ["../../../test.js", {
+      "modules": false,
+      "useBuiltIns": "usage"
+    }]
+  ]
+}
