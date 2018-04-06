@@ -16,6 +16,16 @@ module.exports = declare((api, options = {}) => {
       require.resolve('@babel/preset-react'),
       require.resolve('@babel/preset-stage-1'),
     ],
-    plugins: [require.resolve('@babel/plugin-proposal-class-properties')],
+    plugins: [
+      [
+        require.resolve('@babel/plugin-transform-runtime'),
+        {
+          helpers: false,
+          polyfill: false,
+          regenerator: true,
+        },
+      ],
+      require.resolve('@babel/plugin-proposal-class-properties'),
+    ],
   };
 });
