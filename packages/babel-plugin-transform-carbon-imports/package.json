@@ -1,8 +1,11 @@
 {
   "name": "babel-plugin-transform-carbon-imports",
-  "version": "9.0.0-alpha.0",
+  "version": "9.0.0-alpha.1",
   "main": "index.js",
   "license": "Apache-2.0",
+  "homepage": "http://carbondesignsystem.com",
+  "repository": "https://github.com/carbon-design-system/carbon/tree/master/packages/babel-plugin-transform-carbon-imports",
+  "bugs": "https://github.com/carbon-design-system/carbon/issues",
   "peerDependencies": {
     "carbon-components-react": "5.x"
   }
