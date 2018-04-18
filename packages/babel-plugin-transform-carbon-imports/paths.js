@@ -73,7 +73,7 @@ module.exports = {
     importSpecifier: false,
   },
   DataTable: {
-    path: getComponentPath('DataTable'),
+    path: `${pkgName}/es/components/DataTable/index.js`,
     importSpecifier: false,
   },
   DatePicker: {
