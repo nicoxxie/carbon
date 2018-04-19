@@ -7,3 +7,5 @@ umd.*
 *.umd.*
 package.json
 __testfixtures__
+css
+scss

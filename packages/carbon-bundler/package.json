@@ -1,0 +1,29 @@
+{
+  "name": "@carbon/bundler",
+  "version": "0.0.1",
+  "bin": {
+    "bundler": "./bin/index.js"
+  },
+  "engines": {
+    "node": ">=8"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {},
+  "dependencies": {
+    "chalk": "^2.3.2",
+    "cli-table": "^0.3.1",
+    "commander": "^2.15.1",
+    "cssnano": "^3.10.0",
+    "filesize": "^3.6.1",
+    "fs-extra": "^5.0.0",
+    "gzip-size": "^4.1.0",
+    "lodash.clonedeep": "^4.5.0",
+    "node-sass": "^4.8.3",
+    "ora": "^2.0.0",
+    "postcss": "^6.0.21",
+    "rimraf": "^2.6.2"
+  },
+  "devDependencies": {}
+}
