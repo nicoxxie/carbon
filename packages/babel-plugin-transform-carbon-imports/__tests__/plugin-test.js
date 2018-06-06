@@ -35,6 +35,7 @@ defineTest('Rename multiple', 'rename-multiple');
 defineTest('Default and Specifier', 'default-and-specifier');
 defineTest('Default and Specifier renamed', 'default-and-specifier-rename');
 defineTest('Bug: Data Table 1', 'bug-data-table-1');
+defineTest('Bug: MultiSelect 1', 'bug-multiselect-1');
 
 test('throws on namespace specifiers', () => {
   const input = `

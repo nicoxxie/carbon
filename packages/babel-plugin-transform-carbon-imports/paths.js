@@ -157,7 +157,7 @@ module.exports = {
     importSpecifier: false,
   },
   MultiSelect: {
-    path: getComponentPath('MultiSelect'),
+    path: `${pkgName}/es/components/MultiSelect/index.js`,
     importSpecifier: false,
   },
   NumberInput: {

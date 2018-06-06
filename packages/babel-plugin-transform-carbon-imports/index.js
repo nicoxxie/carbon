@@ -31,11 +31,11 @@ module.exports = ({ types: t }, options) => {
         if (namespaceSpecifiers.length > 0) {
           if (throwOnNamespace) {
             throw new Error(
-              `[${packageJson.name}] does not support the \`import *\` syntax` +
-                'by default as it causes the whole bundle to be included. Instead' +
-                ' use the `import { ComponentName } from` syntax. If you want' +
-                ' to override this option, pass in {`"throwOnNamespace": false}` ' +
-                'as an option to the plugin.'
+              `[${packageJson.name}] does not support the \`import *\` ` +
+                'syntax by default as it causes the whole bundle to be ' +
+                'included. Instead use the `import { ComponentName } from` ' +
+                'syntax. If you want to override this option, pass in ' +
+                '{`"throwOnNamespace": false}` as an option to the plugin.'
             );
           }
           return;
