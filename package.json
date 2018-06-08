@@ -22,7 +22,7 @@
     "@babel/core": "^7.0.0-beta.41",
     "@commitlint/cli": "^6.0.2",
     "@commitlint/config-conventional": "^6.0.2",
-    "all-contributors-cli": "^4.11.0",
+    "all-contributors-cli": "^5.0.0",
     "babel-core": "^7.0.0-beta.3",
     "babel-eslint": "^8.2.1",
     "babel-jest": "^23.0.0",
