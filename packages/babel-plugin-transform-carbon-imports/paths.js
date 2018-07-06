@@ -304,6 +304,10 @@ module.exports = {
     path: getComponentPath('Tooltip'),
     importSpecifier: false,
   },
+  TooltipIcon: {
+    path: getComponentPath('TooltipIcon'),
+    importSpecifier: false,
+  },
   TooltipSimple: {
     path: getComponentPath('TooltipSimple'),
     importSpecifier: false,
